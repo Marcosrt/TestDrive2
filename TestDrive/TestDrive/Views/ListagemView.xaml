@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestDrive"
+             x:Class="TestDrive.Views.ListagemView" Title="TestDrive">
+             
+<!--
+    <StackLayout>
+        <Label Text="Azera V6" />
+        <Label Text="60000" />
+        <Label Text="Fiesta 2.0" />
+        <Label Text="50000" />
+        <Label Text="HB20 S" />
+        <Label Text="40000" />
+        <Label Text="Onix 1.6" />
+        <Label Text="35000" />
+        <Label Text="C3 1.0" />
+        <Label Text="22000" />
+        <Label Text="Uno Fire" />
+        <Label Text="11000" />
+    </StackLayout>
+-->
+
+    
+    <!--
+      <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Label  Grid.Row="0" Grid.Column="0" Text="Azera V6" />
+        <Label  Grid.Row="0" Grid.Column="1" Text="60000" />
+        
+        <Label  Grid.Row="1" Grid.Column="0" Text="Fiesta 2.0" />
+        <Label  Grid.Row="1" Grid.Column="1" Text="50000" />
+        
+        <Label  Grid.Row="2" Grid.Column="0" Text="HB20 S" />
+        <Label  Grid.Row="2" Grid.Column="1" Text="40000" />
+        
+        <Label  Grid.Row="3" Grid.Column="0" Text="Onix 1.6" />
+        <Label  Grid.Row="3" Grid.Column="1" Text="35000" />
+        
+        <Label  Grid.Row="4" Grid.Column="0" Text="C3 1.0" />
+        <Label  Grid.Row="4" Grid.Column="1" Text="22000" />
+        
+        <Label  Grid.Row="5" Grid.Column="0" Text="Uno Fire" />
+        <Label  Grid.Row="5" Grid.Column="1" Text="11000" />
+    </Grid>
+    
+    -->
+
+
+    <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25" ItemTapped="listViewVeiculos_ItemTapped">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
+                            <Label Text=" - " VerticalTextAlignment="Center"></Label>
+                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>
